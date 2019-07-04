@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cases.facebook.Login" tests="1" skipped="1" failures="0" errors="0" timestamp="2019-07-04T22:21:58" hostname="ivan" time="459.513">
-  <properties/>
-  <testcase name="test" classname="cases.facebook.Login" time="459.513">
-    <skipped/>
-  </testcase>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
