@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'qa'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.12.0'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.12.0'
+
+    compile group: 'com.aventstack', name: 'extentreports', version: '4.0.9'
+
+    compile 'junit:junit:4.12'
+    compile 'org.junit.vintage:junit-vintage-engine:5.3.1'
+    compile 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    compile 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.41.0'
+}
