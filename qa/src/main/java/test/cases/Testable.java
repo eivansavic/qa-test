@@ -1,4 +1,4 @@
-package cases;
+package test.cases;
 
 import config.EnvironmentManager;
 import org.junit.Assert;
@@ -7,7 +7,7 @@ import org.junit.Assert;
 public interface Testable {
 
     default void init() {
-        EnvironmentManager.initWebDriver("chrome");
+        EnvironmentManager.initWebDriver(EnvironmentManager.BROWSER.CHROME);
     }
 
     default void test() {

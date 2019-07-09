@@ -7,7 +7,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class EnvironmentManager {
 
-    public static void initWebDriver(String browser) {
+    public static void initWebDriver(BROWSER browser) {
         final WebDriver driver = initDriver(browser);
         RunEnvironment.setWebDriver(driver);
     }
@@ -16,16 +16,20 @@ public class EnvironmentManager {
         RunEnvironment.getWebDriver().quit();
     }
 
-    private static WebDriver initDriver(String browser) {
+    private static WebDriver initDriver(BROWSER browser) {
         switch (browser) {
-            case "chrome":
+            case CHROME:
                 return new ChromeDriver();
-            case "explorer":
+            case EXPLORER:
                 return new InternetExplorerDriver();
-            case "firefox":
+            case FIREFOX:
                 return new FirefoxDriver();
             default:
                 return null;
         }
+    }
+
+    public enum BROWSER {
+        CHROME, FIREFOX, EXPLORER
     }
 }

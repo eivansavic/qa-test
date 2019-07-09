@@ -1,4 +1,4 @@
-package cases.facebook.login;
+package test.cases.facebook.login;
 
 import config.RunEnvironment;
 import org.openqa.selenium.By;
@@ -11,7 +11,7 @@ class Login {
 
     private static final String URL = "https://www.facebook.com";
 
-    void login(@NotNull String email, @NotNull String password) {
+    WebDriver login(@NotNull String email, @NotNull String password) {
         final WebDriver driver = RunEnvironment.getWebDriver();
         driver.get(URL);
 
@@ -21,5 +21,7 @@ class Login {
         final WebElement passwordInput = driver.findElement(By.id("pass"));
         passwordInput.sendKeys(password);
         passwordInput.submit();
+
+        return driver;
     }
 }

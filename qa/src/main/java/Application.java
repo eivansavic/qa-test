@@ -1,9 +1,15 @@
-import cases.TestEnvironment;
-import cases.Testable;
+import test.cases.facebook.login.LoginFailed;
+import test.environment.JUnitCoreEnvironment;
+import test.environment.RunnableEnvironment;
 
 public class Application {
 
+    private static final Class[] classes = {
+            LoginFailed.class
+    };
+
     public static void main(String[] args) {
-        TestEnvironment.runAll();
+        RunnableEnvironment environment = new JUnitCoreEnvironment();
+        environment.runAll(classes);
     }
 }
